@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <img [src]="logo" alt="">
+    <h1>Sombrereria Casa Verde</h1>
+    <h3>Calidad y tradicion en cada producto</h3>
+    <button id="button-comprar">Comprar</button>
   `,
   styles: `
     img{

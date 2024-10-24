@@ -1,0 +1,32 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    font-size: 4rem;
+    margin-block: 0;
+    margin-inline: 0;
+}
+h3{
+    font-size: 2rem;
+}
+#button-comprar{
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    background: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
+}
+#button-comprar:hover{
+    transform:scale(1.3);
+    background-color: #FFC700;
+}
