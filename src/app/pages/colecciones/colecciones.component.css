@@ -1,3 +1,7 @@
+#marcas{
+    width: 75%;
+}
+
 img{
     cursor: pointer;
     transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
@@ -11,4 +15,9 @@ p{
     font-size:medium;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+}
+
+div {
+    display:flex;
+    justify-content: center;
 }

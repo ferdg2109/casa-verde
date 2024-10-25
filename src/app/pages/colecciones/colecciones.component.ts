@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './colecciones.component.css'
 })
 export class ColeccionesComponent {
+  marcas = 'images/coleccion/marcas.png'
   img1 = 'images/coleccion/1.png'
   img2 = 'images/coleccion/4.png'
   img3 = 'images/coleccion/6.png'
