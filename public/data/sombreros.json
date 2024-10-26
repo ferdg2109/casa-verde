@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "id":"1",
+            "nombre": "Cheyenne",
+            "subtitle": "100X",
+            "image":"images/coleccion/1.png",
+            "precio": 370,
+            "calidad":"50x",
+            "material":"Bangora",
+            "ala": 10,
+            "copa": 8
+
+        },
+        {
+           "id":"2",
+           "nombre": "Horma Champion",
+           "subtitle": "Bongora natural",
+           "image":"images/coleccion/1.png" 
+        }
+    ]
+}

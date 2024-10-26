@@ -6,12 +6,14 @@ import { EmpresaComponent } from './pages/empresa/empresa.component';
 import { ContactosComponent } from './pages/contactos/contactos.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SombreroComponent } from './components/sombrero/sombrero.component';
 
 export const routes: Routes = [
     {path:'', redirectTo: "home", pathMatch: 'full'},
     {path:'home', component: HomeComponent},
     {path:'servicios', component: ServiciosComponent },
     {path:'colecciones', component: ColeccionesComponent},
+    {path:'colecciones/:id', component: SombreroComponent},
     {path:'empresa', component: EmpresaComponent},
     {path:'contactos', component: ContactosComponent},
     {path:'signup', component: SignupComponent},

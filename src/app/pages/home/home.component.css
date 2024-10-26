@@ -1,12 +1,7 @@
 :host{
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
 }
-
 
 h1{
     font-size: 4rem;
@@ -17,7 +12,7 @@ h3{
     font-size: 2rem;
 }
 #button-comprar{
-    margin-top: 30px;
+    margin-top: 40px;
     height: 50px;
     width: 200px;
     cursor: pointer;

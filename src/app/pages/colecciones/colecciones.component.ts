@@ -1,14 +1,39 @@
 import { Component } from '@angular/core';
+import data from '../../../../public/data/sombreros.json'
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-colecciones',
   standalone: true,
-  imports: [],
-  templateUrl: './colecciones.component.html',
+  imports: [RouterLink],
+  template: `
+    <div class="row row-cols-1 row-cols-md-4 g-5 p-5" >
+      @for (sombrero of sombreros.data; track sombrero.id) {
+        
+          <div class="col">
+            <div class="card" (click)="navigateToSombreros(sombrero.id)" >
+              <img [src]="sombrero.image" id="img" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a 
+                  routerLink="sombreros"
+                  class="card-title">{{sombrero.nombre}}<br>{{sombrero.subtitle}}
+                </a>
+              </div>
+            </div>
+          </div>
+        }  
+    </div>
+  `,
   styleUrl: './colecciones.component.css'
 })
 export class ColeccionesComponent {
-  marcas = 'images/coleccion/marcas.png'
+ sombreros = data;
+ router: Router = new Router();
+
+ navigateToSombreros(id:String){
+  this.router.navigate(['colecciones',id])
+ }
+
   img1 = 'images/coleccion/1.png'
   img2 = 'images/coleccion/4.png'
   img3 = 'images/coleccion/6.png'
