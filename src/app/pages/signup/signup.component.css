@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #74b9ff, #81ecec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+  }
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+  }
+  
+  .register-form {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 600px;
+    text-align: center;
+  }
+  
+
+  .register-logo {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .input-field {
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 18px;
+    background-color: #f3f3f3;
+    transition: border-color 0.3s ease;
+  }
+  .input-field:focus {
+    border-color: #74b9ff;
+    background-color: white;
+    outline: none;
+  }
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+  }
+  .btn-primary:hover {
+    background-color: #74b9ff;
+    transform: scale(1.02);
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .input-group.invalid .input-field {
+    border-color: #e74c3c;
+  }
+  
+  .login-option {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .login-option a {
+    color: #0984e3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  .login-option a:hover {
+    color: #74b9ff;
+  }
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+    

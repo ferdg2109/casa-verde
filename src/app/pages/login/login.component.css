@@ -1,0 +1,133 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+.login-logo {
+  width: 80px;         
+  height: auto;         
+  margin: 0 auto 20px;  
+  display: block;
+}
+
+body {
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 100px;
+}
+
+.login-form {
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 100%; 
+  text-align: center;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px 50px 15px 15px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 18px;
+  background-color: #f3f3f3;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #74b9ff;
+  outline: none;
+  background-color: white;
+}
+
+.input-icon {
+  position: absolute;
+  top: 60%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background-color: #74b9ff;
+  transform: scale(1.02);
+}
+
+.register {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.register a {
+  color: #0984e3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.register a:hover {
+  color: #74b9ff;
+}
+
+.forgot-password {
+  color: #888;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.input-group.invalid .input-field {
+  border-color: #e74c3c;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
