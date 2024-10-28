@@ -7,6 +7,9 @@ import { Router, RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   template: `
+    <div>
+      <img [src]="marcas" id="marcas" alt="..."> 
+    </div>
     <div class="sombreros-container row  row-cols-md-4 row-cols-lg-4 row-cols-sm-2 gap-5 " >
       @for (sombrero of sombreros.data; track sombrero.id) {
             <div class="card p-0" (click)="navigateToSombreros(sombrero.id)" style="width: 15rem;">
@@ -31,6 +34,7 @@ export class ColeccionesComponent {
   this.router.navigate(['colecciones',id])
  }
 
+ marcas = 'images/coleccion/marcas.png'
   img1 = 'images/coleccion/1.png'
   img2 = 'images/coleccion/4.png'
   img3 = 'images/coleccion/6.png'
