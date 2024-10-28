@@ -7,20 +7,17 @@ import { Router, RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   template: `
-    <div class="row row-cols-1 row-cols-md-4 g-5 p-5" >
+    <div class="sombreros-container row  row-cols-md-4 row-cols-lg-4 row-cols-sm-2 gap-5 " >
       @for (sombrero of sombreros.data; track sombrero.id) {
-        
-          <div class="col">
-            <div class="card" (click)="navigateToSombreros(sombrero.id)" >
+            <div class="card p-0" (click)="navigateToSombreros(sombrero.id)" style="width: 15rem;">
               <img [src]="sombrero.image" id="img" class="card-img-top" alt="...">
               <div class="card-body">
-                <a 
+                <h4 
                   routerLink="sombreros"
-                  class="card-title">{{sombrero.nombre}}<br>{{sombrero.subtitle}}
-                </a>
+                  class="card-title">{{sombrero.nombre.toUpperCase()}}<br>{{sombrero.subtitle}}
+                </h4>
               </div>
             </div>
-          </div>
         }  
     </div>
   `,

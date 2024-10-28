@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { Component } from '@angular/core';
     <img [src]="logo" alt="">
     <h1>Sombrereria Casa Verde</h1>
     <h3>Calidad y tradicion en cada producto</h3>
-    <button id="button-comprar">Comprar</button>
+    <button id="button-comprar" (click)="navigateTo('colecciones')">Comprar</button>
   </div>
   `,
   styles: `
@@ -21,4 +22,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   logo = 'images/logo.png'
+  router: Router = new Router();
+
+  navigateTo(ruta:String){
+    this.router.navigate([ruta])
+  }
 }
