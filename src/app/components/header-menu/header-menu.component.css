@@ -1,7 +1,7 @@
 header{
     background: #095d40;
     width: 100%;
-    height: 40px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;

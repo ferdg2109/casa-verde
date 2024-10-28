@@ -1,14 +1,24 @@
+.sombreros-container{
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 #marcas{
     width: 75%;
 }
 
 img{
     cursor: pointer;
-    transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
+    
 }
 
-#img:hover {
-    transform:scale(1.1);
+.card{
+    transition: transform 0.4s ease-in-out;
+}
+
+.card:hover {
+    transform:scale(1.3);
 }
 
 p{

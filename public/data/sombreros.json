@@ -1,0 +1,71 @@
+{
+    "data": [
+        {
+            "id":"1",
+            "nombre": "Cheyenne 10.5",
+            "subtitle": "100X",
+            "image":"images/coleccion/1.png",
+            "precio": 370,
+            "calidad":"50x",
+            "material":"Bangora",
+            "ala": 10,
+            "copa": 8
+
+        },
+        {
+           "id":"2",
+           "nombre": "Horma Champion",
+           "subtitle": "Bongora natural",
+           "image":"images/coleccion/4.png" 
+        },
+        {
+            "id":"3",
+            "nombre": "Super Light Hat",
+            "subtitle": "Premium 10,000X",
+            "image":"images/coleccion/6.png" 
+         },
+         {
+            "id":"4",
+            "nombre": "CHEYENNE",
+            "subtitle": "100X",
+            "image":"images/coleccion/7.png" 
+         },
+         {
+             "id":"5",
+             "nombre": "HORMA EL PATRÓN",
+             "subtitle": "100X",
+             "image":"images/coleccion/10.png" 
+         },
+         {
+             "id":"6",
+             "nombre": "BANGORA",
+             "subtitle": "Bicolor",
+             "image":"images/coleccion/11.png" 
+         },
+         {
+             "id":"7",
+             "nombre": "8 SEGUNDOS",
+             "subtitle": "50X",
+             "image":"images/coleccion/18.png" 
+         },
+         {
+             "id":"8",
+             "nombre": "Bangora",
+             "subtitle": "Horma Malboro-0",
+             "image":"images/coleccion/30.png" 
+         },
+         {
+             "id":"9",
+             "nombre": "BANGORA",
+             "subtitle": "Horma Malboro Plano",
+             "image":"images/coleccion/31.png" 
+         },
+         {
+             "id":"10",
+             "nombre": "JOAN SEBASTIAN",
+             "subtitle": "100X",
+             "image":"images/coleccion/34.png" 
+         }
+         
+    ]
+}
