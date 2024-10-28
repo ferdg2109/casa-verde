@@ -1,0 +1,24 @@
+p {
+  font-size: larger;
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+}
+h1 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+button {
+  color: black;
+}
+
+.carousel-item active {
+  height: 500px;
+}
+
+.carousel-item {
+  height: 500px;
+}
