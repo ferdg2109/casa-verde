@@ -65,7 +65,67 @@
              "nombre": "JOAN SEBASTIAN",
              "subtitle": "100X",
              "image":"images/coleccion/34.png" 
-         }
+         },
+         {
+            "id":"11",
+            "nombre": "JOAN SEBASTIAN",
+            "subtitle": "100X",
+            "image":"images/coleccion/35.png" 
+        },
+        {
+            "id":"12",
+            "nombre": "MODELO INIDIANA",
+            "subtitle": "Morcon",
+            "image":"images/coleccion/13.png" 
+        },
+        {
+            "id":"13",
+            "nombre": "MODELO INIDIANA",
+            "subtitle": "Morcon",
+            "image":"images/coleccion/14.png" 
+        },
+        {
+            "id":"13",
+            "nombre": "MODELO INIDIANA",
+            "subtitle": "Morcon",
+            "image":"images/coleccion/15.png" 
+        },
+        {
+            "id":"14",
+            "nombre": "HORMA CONEJA",
+            "subtitle": "100X",
+            "image":"images/coleccion/16.png" 
+        },
+        {
+            "id":"15",
+            "nombre": "PALMA VERDE",
+            "subtitle": "Saguayo",
+            "image":"images/coleccion/36.png" 
+        },
+        {
+            "id":"16",
+            "nombre": "HORMA CHIHUAHUA",
+            "subtitle": "Telar cuadrillas",
+            "image":"images/coleccion/37.png" 
+        },
+        {
+            "id":"17",
+            "nombre": "LONA MIXTO",
+            "subtitle": "Viztone West",
+            "image":"images/coleccion/38.png" 
+        },
+        {
+            "id":"18",
+            "nombre": "TAIWAN",
+            "subtitle": "Bicolor americano",
+            "image":"images/coleccion/39.png" 
+        },
+        {
+            "id":"19",
+            "nombre": "HORMA EL FANTASMA",
+            "subtitle": "Lonita",
+            "image":"images/coleccion/40.png" 
+        }
          
     ]
 }

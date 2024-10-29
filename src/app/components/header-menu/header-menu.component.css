@@ -1,5 +1,5 @@
 header{
-    background: #095d40;
+    background: rgb(33, 115, 78);
     width: 100%;
     height: auto;
     display: flex;
@@ -29,7 +29,7 @@ header{
         }
 
         & a:hover{
-            color: #FFC700;
+            color: rgb(0, 0, 0);
         }
     }
 }

@@ -10,15 +10,15 @@ import { Router, RouterLink } from '@angular/router';
     <div>
       <img [src]="marcas" id="marcas" alt="..."> 
     </div>
-    <div class="sombreros-container row  row-cols-md-4 row-cols-lg-4 row-cols-sm-2 gap-5 " >
+   <div class="sombreros-container row  row-cols-md-4 row-cols-lg-4 row-cols-sm-2 gap-5 " >
       @for (sombrero of sombreros.data; track sombrero.id) {
             <div class="card p-0" (click)="navigateToSombreros(sombrero.id)" style="width: 15rem;">
               <img [src]="sombrero.image" id="img" class="card-img-top" alt="...">
               <div class="card-body">
-                <h4 
+                <p 
                   routerLink="sombreros"
                   class="card-title">{{sombrero.nombre.toUpperCase()}}<br>{{sombrero.subtitle}}
-                </h4>
+                </p>
               </div>
             </div>
         }  
@@ -34,6 +34,7 @@ export class ColeccionesComponent {
   this.router.navigate(['colecciones',id])
  }
 
+ fondo = 'images/fondo.jpg'
  marcas = 'images/coleccion/marcas.png'
   img1 = 'images/coleccion/1.png'
   img2 = 'images/coleccion/4.png'
@@ -50,4 +51,5 @@ export class ColeccionesComponent {
   img14 = 'images/coleccion/14.png'
   img15 = 'images/coleccion/15.png'
   img16 = 'images/coleccion/16.png'
+  img17 = 'images/coleccion/36.png'
 }
