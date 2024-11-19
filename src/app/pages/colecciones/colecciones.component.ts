@@ -7,7 +7,7 @@ import { Router, RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   template: `
-    <div>
+    <!--<div>
       <img [src]="marcas" id="marcas" alt="..."> 
     </div>
    <div class="sombreros-container row  row-cols-md-4 row-cols-lg-4 row-cols-sm-2 gap-5 " >
@@ -22,9 +22,9 @@ import { Router, RouterLink } from '@angular/router';
               </div>
             </div>
         }  
-    </div>
+    </div> -->
   `,
-  styleUrl: './colecciones.component.css'
+  templateUrl: './colecciones.component.html',
 })
 export class ColeccionesComponent {
  sombreros = data;
