@@ -1,124 +1,133 @@
 <div class="register-container">
     <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="register-form">
       <img [src]="logo" alt="Logo" class="register-logo" />
-      <div class="input-group" [class.invalid]="isInvalid('firstName')">
-        <input 
-          type="text" 
-          formControlName="firstName" 
-          placeholder="Nombre" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('firstName')" class="error">
-          <span>El nombre es obligatorio.</span>
+      
+      <div class="main-container">
+        <div>
+          <div class="input-group" [class.invalid]="isInvalid('firstName')">
+            <input 
+              type="text" 
+              formControlName="firstName" 
+              placeholder="Nombre" 
+              class="input-field" 
+            />
+            <div *ngIf="isInvalid('firstName')" class="error">
+              <span>El nombre es obligatorio.</span>
+            </div>
+          </div>
+          <div class="input-group" [class.invalid]="isInvalid('lastName')">
+            <input 
+              type="text" 
+              formControlName="lastName" 
+              placeholder="Apellido Paterno" 
+              class="input-field" 
+            />
+            <div *ngIf="isInvalid('lastName')" class="error">
+              <span>El apellido paterno es obligatorio.</span>
+            </div>
+          </div>
+          <div class="input-group" [class.invalid]="isInvalid('middleName')">
+            <input 
+              type="text" 
+              formControlName="middleName" 
+              placeholder="Apellido Materno" 
+              class="input-field" 
+            />
+            <div *ngIf="isInvalid('middleName')" class="error">
+              <span>El apellido materno es obligatorio.</span>
+            </div>
+          </div>
+          <div class="input-group" [class.invalid]="isInvalid('email')">
+            <input 
+              type="email" 
+              formControlName="email" 
+              placeholder="Correo Electrónico" 
+              class="input-field" 
+            />
+            <div *ngIf="isInvalid('email')" class="error">
+              <span *ngIf="registerForm.get('email')?.errors?.['required']">
+                El correo es obligatorio.
+              </span>
+              <span *ngIf="registerForm.get('email')?.errors?.['email']">
+                Ingresa un correo válido.
+              </span>
+            </div>
+          </div>
+          <div class="input-group" [class.invalid]="isInvalid('password')">
+            <input 
+              type="password" 
+              formControlName="password" 
+              placeholder="Contraseña" 
+              class="input-field" 
+            />
+            <div *ngIf="isInvalid('password')" class="error">
+              <span>La contraseña es obligatoria.</span>
+            </div>
+          </div>
+          <div class="input-group" [class.invalid]="isInvalid('confirmPassword')">
+            <input 
+              type="password" 
+              formControlName="confirmPassword" 
+              placeholder="Confirmar Contraseña" 
+              class="input-field" 
+            />
+            <div *ngIf="isInvalid('confirmPassword')" class="error">
+              <span>Es necesario confirmar la contraseña.</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="input-group" [class.invalid]="isInvalid('lastName')">
-        <input 
-          type="text" 
-          formControlName="lastName" 
-          placeholder="Apellido Paterno" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('lastName')" class="error">
-          <span>El apellido paterno es obligatorio.</span>
-        </div>
-      </div>
-      <div class="input-group" [class.invalid]="isInvalid('middleName')">
-        <input 
-          type="text" 
-          formControlName="middleName" 
-          placeholder="Apellido Materno" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('middleName')" class="error">
-          <span>El apellido materno es obligatorio.</span>
-        </div>
-      </div>
-      <div class="input-group" [class.invalid]="isInvalid('email')">
-        <input 
-          type="email" 
-          formControlName="email" 
-          placeholder="Correo Electrónico" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('email')" class="error">
-          <span *ngIf="registerForm.get('email')?.errors?.['required']">
-            El correo es obligatorio.
-          </span>
-          <span *ngIf="registerForm.get('email')?.errors?.['email']">
-            Ingresa un correo válido.
-          </span>
-        </div>
-      </div>
-      <div class="input-group" [class.invalid]="isInvalid('password')">
-        <input 
-          type="password" 
-          formControlName="password" 
-          placeholder="Contraseña" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('password')" class="error">
-          <span>La contraseña es obligatoria.</span>
-        </div>
-      </div>
-      <div class="input-group" [class.invalid]="isInvalid('confirmPassword')">
-        <input 
-          type="password" 
-          formControlName="confirmPassword" 
-          placeholder="Confirmar Contraseña" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('confirmPassword')" class="error">
-          <span>Es necesario confirmar la contraseña.</span>
-        </div>
-      </div>
-        <div class="input-group" [class.invalid]="isInvalid('street')">
-        <input 
-          type="text" 
-          formControlName="street" 
-          placeholder="Calle y Número" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('street')" class="error">
-          <span>El domicilio es obligatorio.</span>
-        </div>
-      </div>
   
-      <div class="input-group" [class.invalid]="isInvalid('city')">
-        <input 
-          type="text" 
-          formControlName="city" 
-          placeholder="Ciudad" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('city')" class="error">
-          <span>La ciudad es obligatoria.</span>
-        </div>
+          <div>
+            <div class="input-group" [class.invalid]="isInvalid('street')">
+              <input 
+                type="text" 
+                formControlName="street" 
+                placeholder="Calle y Número" 
+                class="input-field" 
+              />
+              <div *ngIf="isInvalid('street')" class="error">
+                <span>El domicilio es obligatorio.</span>
+              </div>
+            </div>
+        
+            <div class="input-group" [class.invalid]="isInvalid('city')">
+              <input 
+                type="text" 
+                formControlName="city" 
+                placeholder="Ciudad" 
+                class="input-field" 
+              />
+              <div *ngIf="isInvalid('city')" class="error">
+                <span>La ciudad es obligatoria.</span>
+              </div>
+            </div>
+        
+            <div class="input-group" [class.invalid]="isInvalid('state')">
+              <input 
+                type="text" 
+                formControlName="state" 
+                placeholder="Estado" 
+                class="input-field" 
+              />
+              <div *ngIf="isInvalid('state')" class="error">
+                <span>El estado es obligatorio.</span>
+              </div>
+            </div>
+        
+            <div class="input-group" [class.invalid]="isInvalid('zipCode')">
+              <input 
+                type="text" 
+                formControlName="zipCode" 
+                placeholder="Código Postal" 
+                class="input-field" 
+              />
+              <div *ngIf="isInvalid('zipCode')" class="error">
+                <span>El código postal es obligatorio.</span>
+              </div>
+            </div>
+          </div>
       </div>
-  
-      <div class="input-group" [class.invalid]="isInvalid('state')">
-        <input 
-          type="text" 
-          formControlName="state" 
-          placeholder="Estado" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('state')" class="error">
-          <span>El estado es obligatorio.</span>
-        </div>
-      </div>
-  
-      <div class="input-group" [class.invalid]="isInvalid('zipCode')">
-        <input 
-          type="text" 
-          formControlName="zipCode" 
-          placeholder="Código Postal" 
-          class="input-field" 
-        />
-        <div *ngIf="isInvalid('zipCode')" class="error">
-          <span>El código postal es obligatorio.</span>
-        </div>
-      </div>
+      
   
       <button type="submit" class="btn-primary" [disabled]="registerForm.invalid">
         Registrarse
