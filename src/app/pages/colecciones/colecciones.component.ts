@@ -7,9 +7,6 @@ import { Router, RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   template: `
-    <div>
-      <img [src]="marcas" id="marcas" alt="..."> 
-    </div>
    <div class="sombreros-container row  row-cols-md-4 row-cols-lg-4 row-cols-sm-2 gap-5 " >
       @for (sombrero of sombreros.data; track sombrero.id) {
             <div class="card p-0" (click)="navigateToSombreros(sombrero.id)" style="width: 15rem;">
@@ -21,7 +18,7 @@ import { Router, RouterLink } from '@angular/router';
                 </p>
               </div>
             </div>
-        }  
+        } 
     </div>
   `,
   styleUrl: './colecciones.component.css'

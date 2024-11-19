@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './empresa.component.css'
 })
 export class EmpresaComponent {
-
+empresa = 'images/2.jpg'
+mision = 'images/5.jpg'
+vision = 'images/6.jpg'
 }

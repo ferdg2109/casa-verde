@@ -1,10 +1,9 @@
 #img1{
-    width: 50%; 
+    width:65%;
 }
 
-#img2{
-    width: 50%; 
-    float: right;
+#ser{
+    width:80%;
 }
 
 #button-ver {
@@ -25,8 +24,17 @@
 }
 
 div {
-    display: flex;
     justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 
 

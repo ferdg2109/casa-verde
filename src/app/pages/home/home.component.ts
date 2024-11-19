@@ -6,12 +6,14 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   template: `
-    <div class="mt-3 container d-flex flex-column align-items-center gap-3">
-    <img [src]="logo" alt="">
-    <h1>Sombrerería Casa Verde</h1>
-    <h3>Calidad y tradición en cada producto</h3>
-    <button id="button-comprar" (click)="navigateTo('colecciones')">COMPRAR</button>
+    <body> 
+    <div class="mt-3 container d-flex flex-column align-items-center gap-3 fondo">
+    <br>
+    <img [src]= fondo id="fondo" alt="">
+    <img [src]= inicio id="img1" alt="">
+    <button id="button-comprar" (click)="navigateTo('colecciones')">VER TODO</button>
   </div>
+</body>
   `,
   styles: `
     img{
@@ -21,7 +23,9 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  logo = 'images/logo.png'
+  fondo = 'images/Inicio.jpg'
+  inicio = 'images/inicio1.jpg'
+
   router: Router = new Router();
 
   navigateTo(ruta:String){

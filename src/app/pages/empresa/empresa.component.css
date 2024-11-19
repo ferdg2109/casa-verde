@@ -1,24 +1,33 @@
-p {
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-  text-align: justify;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 50px;
+/* General */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-h1 {
-  text-align: center;
-  margin-top: 5px;
+
+div {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#empresa{
+  width: 75%;
+}
+
+#mision{
+  width: 75%;
+}
+
+#vision{
+  float: right;
+  width: 75%;
 }
 
 button {
   color: black;
 }
 
-.carousel-item active {
-  height: 500px;
-}
 
-.carousel-item {
-  height: 500px;
-}
