@@ -1,0 +1,8 @@
+<div class="p-10 grid gap-4 grid-cols-4">
+    @for (sombrero of sombreros.data; track sombrero.id) {
+        <app-sombrero-card [product]="sombrero"></app-sombrero-card>
+    }
+
+</div>
+
+
