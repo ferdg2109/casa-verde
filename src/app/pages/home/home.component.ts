@@ -6,19 +6,14 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   template: `
-    <body> 
-    <div class="mt-3 container d-flex flex-column align-items-center gap-3 fondo">
-    <br>
-    <img [src]= fondo id="fondo" alt="">
-    <img [src]= inicio id="img1" alt="">
+  <div class=" flex flex-col gap-5 fondo py-20">
+    <img class="  max-w-[900px]" [src]= fondo id="fondo" alt="">
+    <img class=" max-w-[900px]" [src]= inicio id="img1" alt="">
     <button id="button-comprar" (click)="navigateTo('colecciones')">VER TODO</button>
   </div>
-</body>
   `,
   styles: `
-    img{
-      width: 450px;
-    }
+    
   `,
   styleUrl: './home.component.css'
 })
