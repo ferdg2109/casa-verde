@@ -1,131 +1,224 @@
 {
     "data": [
         {
-            "id":"1",
+            "id": "1",
             "nombre": "Cheyenne 10.5",
             "subtitle": "100X",
-            "image":"images/coleccion/1.png",
-            "precio": 370,
-            "calidad":"50x",
-            "material":"Bangora",
+            "image": "images/coleccion/1.png",
+            "precio": 2500,
+            "calidad": "100X",
+            "material": "Bangora",
+            "ala": 10.5,
+            "copa": 8
+        },
+        {
+            "id": "2",
+            "nombre": "Horma Champion",
+            "subtitle": "Bongora natural",
+            "image": "images/coleccion/4.png",
+            "precio": 500,
+            "calidad": "100X",
+            "material": "Bangora natural",
             "ala": 10,
             "copa": 8
-
         },
         {
-           "id":"2",
-           "nombre": "Horma Champion",
-           "subtitle": "Bongora natural",
-           "image":"images/coleccion/4.png" 
-        },
-        {
-            "id":"3",
+            "id": "3",
             "nombre": "Super Light Hat",
             "subtitle": "Premium 10,000X",
-            "image":"images/coleccion/6.png" 
-         },
-         {
-            "id":"4",
+            "image": "images/coleccion/6.png",
+            "precio": 2200,
+            "calidad": "10,000X",
+            "material": "Lona fina",
+            "ala": 9,
+            "copa": 6
+        },
+        {
+            "id": "4",
             "nombre": "CHEYENNE",
             "subtitle": "100X",
-            "image":"images/coleccion/7.png" 
-         },
-         {
-             "id":"5",
-             "nombre": "HORMA EL PATRÓN",
-             "subtitle": "100X",
-             "image":"images/coleccion/10.png" 
-         },
-         {
-             "id":"6",
-             "nombre": "BANGORA",
-             "subtitle": "Bicolor",
-             "image":"images/coleccion/11.png" 
-         },
-         {
-             "id":"7",
-             "nombre": "8 SEGUNDOS",
-             "subtitle": "50X",
-             "image":"images/coleccion/18.png" 
-         },
-         {
-             "id":"8",
-             "nombre": "Bangora",
-             "subtitle": "Horma Malboro-0",
-             "image":"images/coleccion/30.png" 
-         },
-         {
-             "id":"9",
-             "nombre": "BANGORA",
-             "subtitle": "Horma Malboro Plano",
-             "image":"images/coleccion/31.png" 
-         },
-         {
-             "id":"10",
-             "nombre": "JOAN SEBASTIAN",
-             "subtitle": "100X",
-             "image":"images/coleccion/34.png" 
-         },
-         {
-            "id":"11",
+            "image": "images/coleccion/7.png",
+            "precio": 2200,
+            "calidad": "100X",
+            "material": "Papel arroz original",
+            "ala": 10,
+            "copa": 6
+        },
+        {
+            "id": "5",
+            "nombre": "HORMA EL PATRÓN",
+            "subtitle": "100X",
+            "image": "images/coleccion/10.png",
+            "precio": 1800,
+            "calidad": "100X",
+            "material": "Lana",
+            "ala": 6,
+            "copa": 10
+        },
+        {
+            "id": "6",
+            "nombre": "BANGORA",
+            "subtitle": "Bicolor",
+            "image": "images/coleccion/11.png",
+            "precio": 450,
+            "calidad": "50X",
+            "material": "Bangora",
+            "ala": 10,
+            "copa": 7
+        },
+        {
+            "id": "7",
+            "nombre": "8 SEGUNDOS",
+            "subtitle": "50X",
+            "image": "images/coleccion/18.png",
+            "precio": 450,
+            "calidad": "50X",
+            "material": "Bangora",
+            "ala": 10,
+            "copa": 7
+        },
+        {
+            "id": "8",
+            "nombre": "Horma Malboro-0",
+            "subtitle": "Exclusive Hats",
+            "image": "images/coleccion/30.png",
+            "precio": 450,
+            "calidad": "5X",
+            "material": "Bangora",
+            "ala": 10,
+            "copa": 7
+        },
+        {
+            "id": "9",
+            "nombre": "Horma Malboro Plano",
+            "subtitle": "Exclusive Hats",
+            "image": "images/coleccion/31.png",
+            "precio": 450,
+            "calidad": "5X",
+            "material": "Bangora",
+            "ala": 10,
+            "copa": 7
+        },
+        {
+            "id": "10",
             "nombre": "JOAN SEBASTIAN",
             "subtitle": "100X",
-            "image":"images/coleccion/35.png" 
+            "image": "images/coleccion/34.png",
+            "precio": 1800,
+            "calidad": "100X",
+            "material": "Lana",
+            "ala": 9,
+            "copa": 6
         },
         {
-            "id":"12",
+            "id": "11",
+            "nombre": "JOAN SEBASTIAN",
+            "subtitle": "100X",
+            "image": "images/coleccion/35.png",
+            "precio": 1800,
+            "calidad": "100X",
+            "material": "Lana",
+            "ala": 9,
+            "copa": 6
+        },
+        {
+            "id": "12",
             "nombre": "MODELO INIDIANA",
             "subtitle": "Morcon",
-            "image":"images/coleccion/13.png" 
+            "image": "images/coleccion/13.png",
+            "precio": 200,
+            "calidad": "5X",
+            "material": "Bangora",
+            "ala": 6,
+            "copa": 4
         },
         {
-            "id":"13",
+            "id": "13",
             "nombre": "MODELO INIDIANA",
             "subtitle": "Morcon",
-            "image":"images/coleccion/14.png" 
+            "image": "images/coleccion/14.png",
+            "precio": 200,
+            "calidad": "5X",
+            "material": "Bangora",
+            "ala": 6,
+            "copa": 4
         },
         {
-            "id":"13",
+            "id": "14",
             "nombre": "MODELO INIDIANA",
             "subtitle": "Morcon",
-            "image":"images/coleccion/15.png" 
+            "image": "images/coleccion/15.png",
+            "precio": 200,
+            "calidad": "5X",
+            "material": "Bangora",
+            "ala": 6,
+            "copa": 4
         },
         {
-            "id":"14",
+            "id": "15",
             "nombre": "HORMA CONEJA",
             "subtitle": "100X",
-            "image":"images/coleccion/16.png" 
+            "image": "images/coleccion/16.png",
+            "precio": 650,
+            "calidad": "100X",
+            "material": "Bangora",
+            "ala": 11,
+            "copa": 9
         },
         {
-            "id":"15",
+            "id": "16",
             "nombre": "PALMA VERDE",
             "subtitle": "Saguayo",
-            "image":"images/coleccion/36.png" 
+            "image": "images/coleccion/36.png",
+            "precio": 170,
+            "calidad": "2X",
+            "material": "Bangora",
+            "ala": 10,
+            "copa": 7
         },
         {
-            "id":"16",
+            "id": "17",
             "nombre": "HORMA CHIHUAHUA",
             "subtitle": "Telar cuadrillas",
-            "image":"images/coleccion/37.png" 
+            "image": "images/coleccion/37.png",
+            "precio": 330,
+            "calidad": "50X",
+            "material": "Lona",
+            "ala": 9,
+            "copa": 7
         },
         {
-            "id":"17",
+            "id": "18",
             "nombre": "LONA MIXTO",
             "subtitle": "Viztone West",
-            "image":"images/coleccion/38.png" 
+            "image": "images/coleccion/38.png",
+            "precio": 200,
+            "calidad": "2X",
+            "material": "Lona mixta",
+            "ala": 9,
+            "copa": 7
         },
         {
-            "id":"18",
+            "id": "19",
             "nombre": "TAIWAN",
             "subtitle": "Bicolor americano",
-            "image":"images/coleccion/39.png" 
+            "image": "images/coleccion/39.png",
+            "precio": 370,
+            "calidad": "5X",
+            "material": "Bangora",
+            "ala": 9,
+            "copa": 6
         },
         {
-            "id":"19",
+            "id": "20",
             "nombre": "HORMA EL FANTASMA",
             "subtitle": "Lonita",
-            "image":"images/coleccion/40.png" 
+            "image": "images/coleccion/40.png",
+            "precio": 220,
+            "calidad": "50X",
+            "material": "Lona",
+            "ala": 8,
+            "copa": 6
         }
-         
     ]
 }

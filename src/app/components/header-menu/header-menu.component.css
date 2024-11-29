@@ -1,9 +1,9 @@
 header {
-    top: 0;
+    /*top: 0;*/
     width: 100%;
     background: rgba(9, 93, 64, 0.7);/* Fondo del encabezado */
     color: white;
-    z-index: 1000;
+    /*z-index: 1000*/;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para el encabezado */
 
     & ul {
