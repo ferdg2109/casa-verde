@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import data from '../../../../public/data/sombreros.json';
 import { initFlowbite } from 'flowbite';
+import { SombrerosService } from '../../pages/data-access/sombreros.services';
 
 @Component({
   selector: 'app-sombrero',
@@ -10,8 +11,8 @@ import { initFlowbite } from 'flowbite';
   templateUrl:'sombrero.component.html'
 })
 export class SombreroComponent implements OnInit {
-  sombreroId:Number = 0;
-  sombrerosData = data;
+  sombreroId:string;
+  sombrerosData:any;
   sombrero:any;
   router: Router = new Router();
 
@@ -20,9 +21,13 @@ export class SombreroComponent implements OnInit {
   ngOnInit(): void {
     initFlowbite();
   }
-  constructor(){
+  constructor(private sombrerosServices: SombrerosService){
     this.sombreroId = this.url.snapshot.params['id'];
-    [this.sombrero] = this.sombrerosData.data.filter(sombrero => sombrero.id === this.sombreroId.toString())
+
+    this.sombrerosServices.getSombrero(this.sombreroId).subscribe(data => {
+      this.sombrero = data;
+    });
+
     console.log(this.sombreroId)
     console.log(this.sombrero)
   }

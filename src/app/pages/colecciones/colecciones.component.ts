@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import data from '../../../../public/data/sombreros.json'
 import { SombreroCardComponent } from '../../components/sombrero-card/sombrero-card.component';
+import { SombrerosService } from '../data-access/sombreros.services';
 
 @Component({
   selector: 'app-colecciones',
@@ -9,9 +10,19 @@ import { SombreroCardComponent } from '../../components/sombrero-card/sombrero-c
   templateUrl:'./colecciones.component.html',
   styleUrl: './colecciones.component.css'
 })
-export class ColeccionesComponent {
- sombreros = data;
+export class ColeccionesComponent implements OnInit {
+ sombreros:any;
 
+ constructor(private sombrerosService:SombrerosService){
+
+ }
+
+ ngOnInit(): void{
+  this.sombrerosService.getSombreros().subscribe(data => {
+    this.sombreros = data;
+    console.log(data)
+  })
+ }
 
  fondo = 'images/fondo.jpg'
  marcas = 'images/coleccion/marcas.png'

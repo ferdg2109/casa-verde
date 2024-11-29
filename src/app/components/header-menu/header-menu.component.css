@@ -6,7 +6,7 @@ header {
     /*z-index: 1000*/;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para el encabezado */
 
-    & ul {
+    & .ul-header {
         list-style: none;
         display: flex;
         flex-direction: row;
@@ -14,7 +14,7 @@ header {
         margin: 0;
         padding: 0;
 
-        & li {
+        & .li-header {
             font-family: "Hatton", serif;
             font-size: 130%;
         }

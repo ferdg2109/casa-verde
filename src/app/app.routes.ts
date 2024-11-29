@@ -7,6 +7,7 @@ import { ContactosComponent } from './pages/contactos/contactos.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SombreroComponent } from './components/sombrero/sombrero.component';
+import { CuentaUsuarioComponent } from './pages/cuenta-usuario/cuenta-usuario.component';
 
 export const routes: Routes = [
     {path:'', redirectTo: "home", pathMatch: 'full'},
@@ -18,4 +19,5 @@ export const routes: Routes = [
     {path:'contactos', component: ContactosComponent},
     {path:'signup', component: SignupComponent},
     {path:'login', component: LoginComponent},
+    {path:'mi-cuenta', component: CuentaUsuarioComponent}
 ];
