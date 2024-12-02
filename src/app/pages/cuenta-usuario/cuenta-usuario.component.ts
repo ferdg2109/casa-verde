@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EditarCuentaComponent } from '../../components/editar-cuenta/editar-cuenta.component';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-cuenta-usuario',
@@ -8,11 +9,15 @@ import { EditarCuentaComponent } from '../../components/editar-cuenta/editar-cue
   templateUrl: './cuenta-usuario.component.html',
   styles: ``
 })
-export class CuentaUsuarioComponent {
+export class CuentaUsuarioComponent implements OnInit {
 
   usuario:any;
   usuarioId: string= '';
   isAuth:boolean = false;
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
 
   constructor(){
     this.isAuth = !!localStorage.getItem('usuario')
