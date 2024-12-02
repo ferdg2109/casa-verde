@@ -12,4 +12,8 @@ export class UsuariosService extends BaseHttpService {
     register(usuario: any){
         return this.http.post(`${this.apiUrl}/usuario/create`, usuario, {responseType: 'json'});
     }
+
+    update(usuario: any, id:string){
+        return this.http.patch(`${this.apiUrl}/usuario/${id}`, usuario, {responseType: 'json'});
+    }
 }

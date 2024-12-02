@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
+import { EditarCuentaComponent } from '../../components/editar-cuenta/editar-cuenta.component';
 
 @Component({
   selector: 'app-cuenta-usuario',
   standalone: true,
-  imports: [],
+  imports: [EditarCuentaComponent],
   templateUrl: './cuenta-usuario.component.html',
   styles: ``
 })
 export class CuentaUsuarioComponent {
 
   usuario:any;
+  usuarioId: string= '';
   isAuth:boolean = false;
 
   constructor(){
@@ -17,7 +19,10 @@ export class CuentaUsuarioComponent {
 
     if(this.isAuth){
       const data = localStorage.getItem('usuario');
-      if(data) this.usuario = JSON.parse(data);
+      if(data){
+        this.usuario = JSON.parse(data);
+        this.usuarioId = this.usuario.id;
+      } 
     }
   }
 }
