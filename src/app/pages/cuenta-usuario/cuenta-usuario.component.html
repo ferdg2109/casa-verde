@@ -6,20 +6,20 @@
                 <div class="flex space-x-4">
                 <img class="h-16 w-16 rounded-lg" src="" alt="Usuario" />
                 <div>
-                    <h2 class="flex items-center text-xl font-bold leading-none text-gray-900 dark:text-white sm:text-2xl">Nombre de usuario</h2>
+                    <h2 class="flex items-center text-xl font-bold leading-none text-gray-900 dark:text-white sm:text-2xl">{{usuario.nombre}} {{usuario.apellidoP}}</h2>
                 </div>
                 </div>
                 <dl class="">
-                <dt class="font-semibold text-gray-900 dark:text-white">Email Address</dt>
-                <dd class="text-gray-500 dark:text-gray-400">heleneexample.com</dd>
+                <dt class="font-semibold text-gray-900 ">Correo</dt>
+                <dd class="text-gray-500 dark:text-gray-400">{{usuario.correo}}</dd>
                 </dl>
                 <dl>
-                <dt class="font-semibold text-gray-900 dark:text-white">Home Address</dt>
+                <dt class="font-semibold text-gray-900 dark:text-white">Domicilio</dt>
                 <dd class="flex items-center gap-1 text-gray-500 dark:text-gray-400">
                     <svg class="hidden h-5 w-5 shrink-0 text-gray-400 dark:text-gray-500 lg:inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
                     </svg>
-                    2 Miles Drive, NJ 071, New York, United States of America
+                    {{usuario.calle}} {{usuario.ciudad}} {{usuario.estado}}
                 </dd>
                 </dl>
                 <dl>

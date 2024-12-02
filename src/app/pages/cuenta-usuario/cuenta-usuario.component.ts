@@ -9,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class CuentaUsuarioComponent {
 
+  usuario:any;
+  isAuth:boolean = false;
+
+  constructor(){
+    this.isAuth = !!localStorage.getItem('usuario')
+
+    if(this.isAuth){
+      const data = localStorage.getItem('usuario');
+      if(data) this.usuario = JSON.parse(data);
+    }
+  }
 }

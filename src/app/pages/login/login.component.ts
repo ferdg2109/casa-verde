@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { routes } from '../../app.routes';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { UsuariosService } from '../data-access/usuarios.services';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -12,18 +11,37 @@ import { routes } from '../../app.routes';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  private usuarioService = inject(UsuariosService);
+
+  router:Router = new Router();
+  
   logo ="images/logo.png"
   loginForm: FormGroup;
+  sesionError: boolean = false;
 
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      rememberMe: [false]
+      correo: ['', [Validators.required, Validators.email]],
+      contraseña: ['', Validators.required],
     });
   }
+
   onSubmit() {
     if (this.loginForm.valid) {
+      const credenciales = this.loginForm.value;
+
+      this.usuarioService.login(credenciales)
+        .subscribe(
+          (response: any) => {
+            console.log("login exitoso: ",response.usuario);
+            localStorage.setItem('usuario', JSON.stringify(response.usuario));
+            this.router.navigate(['colecciones']);
+          },
+          (error: any) => {
+            console.log("error al iniciar sesion: ",error);
+            this.sesionError = true;
+          }
+        )
       console.log('Formulario enviado:', this.loginForm.value);
     } else {
       console.log('Formulario inválido');
