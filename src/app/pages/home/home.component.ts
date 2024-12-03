@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   <div class=" flex flex-col gap-5 fondo py-20">
     <img class="  max-w-[900px]" [src]= fondo id="fondo" alt="">
     <img class=" max-w-[900px]" [src]= inicio id="img1" alt="">
-    <button id="button-comprar" (click)="navigateTo('colecciones')">VER TODO</button>
+    <button id="button-comprar" (click)="navigateTo('colecciones')">Ver todo</button>
   </div>
   `,
   styles: `
