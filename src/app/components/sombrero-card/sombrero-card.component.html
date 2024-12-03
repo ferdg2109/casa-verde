@@ -37,8 +37,9 @@
             <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>-->
         </div>
         <div class="flex items-center justify-between">
-            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-            <button href="#" class="text-white bg-green-500 hover:bg-green-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center flex  ">
+            <span class="text-3xl font-bold text-gray-900 dark:text-white">$ {{product().precio}}</span>
+            <button class="text-white bg-green-500 hover:bg-green-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center flex 
+                     " (click)="addToCart(product())">
                 <svg
                 class="w-5 h-5 -ms-2 me-2"
                 aria-hidden="true"
