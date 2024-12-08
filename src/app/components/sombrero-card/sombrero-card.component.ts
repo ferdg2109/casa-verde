@@ -1,6 +1,7 @@
 import { Component, inject, input } from '@angular/core';
 import { RouterLink,Router } from '@angular/router';
 import { StorageService } from '../../pages/data-access/storage.service';
+import { CartStore } from '../../shared/cart-store';
 
 @Component({
   selector: 'app-sombrero-card',
@@ -10,12 +11,14 @@ import { StorageService } from '../../pages/data-access/storage.service';
   styles: ``
 })
 export class SombreroCardComponent {
-  storageService = inject(StorageService);
+  //storageService = inject(StorageService);
+  cartStore = inject(CartStore);
   product = input.required<any>();
+
 
   router: Router = new Router();
 
-  initialProducts:[] = [];
+  //initialProducts:[] = [];
 
   navigateToSombreros(id:String){
    this.router.navigate(['colecciones',id])
@@ -26,14 +29,16 @@ export class SombreroCardComponent {
       product: product,
       quantity: 1
     }
-    this.initialProducts = this.storageService.loadProducts();
+
+    this.cartStore.addToCart(productToAdd);
+    /*this.initialProducts = this.storageService.loadProducts();
 
     const products = this.add(productToAdd);
 
-    this.storageService.saveProducts(products);
+    this.storageService.saveProducts(products);*/
   }
 
-  private add(productToAdd:any){
+  /*private add(productToAdd:any){
     const isInCart:any = this.initialProducts.find(
       (productInCart:any) => productInCart.product.id === productToAdd.product.id
     );
@@ -45,5 +50,5 @@ export class SombreroCardComponent {
     isInCart.quantity +=1;
 
     return [...this.initialProducts]
-  }
+  }*/
 }

@@ -1,12 +1,33 @@
+@if (storeCart.products().length<1) {
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-sm text-center">
+            <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">Oops!</h1>
+            <p class="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">Tu carrito esta vacio</p>
+            <p class="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">Sigue navegando para encontrar productos y agregarlos a tu carrito </p>
+            <a routerLink="/colecciones" class="inline-flex text-white bg-green-500 hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center my-4">Volver a la tienda</a>
+        </div>   
+    </div>
+</section>
+}
+@else {
+
+
 <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+      <a routerLink="/colecciones" class="flex flex-row gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-7">
+          <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l1.22 1.22a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd" />
+        </svg>  
+        <span>Seguir comprando</span>
+      </a>
       <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Carrito de compras</h2>
   
       <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
         <div class="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
           <div class="space-y-6">
 
-            @for (producto of productos; track producto.product.id) {
+            @for (producto of storeCart.products(); track producto.product.id) {
               <div class="rounded-lg border border-gray-300 bg-white p-4 shadow-lg  md:p-6">
                 <div class="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                   <a href="#" class="shrink-0 md:order-1">
@@ -34,7 +55,7 @@
                   </div>
     
                   <div class="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                    <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white">{{producto.product.nombre}} {{producto.product.subtitulo}}</a>
+                    <a [routerLink]="['/colecciones', producto.product.id]" class="text-base font-medium text-gray-900 hover:underline dark:text-white">{{producto.product.nombre}} {{producto.product.subtitulo}}</a>
     
                     <div class="flex items-center gap-4">
                       <button type="button" class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white">
@@ -44,7 +65,7 @@
                         Añadir a favoritos
                       </button>
     
-                      <button type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+                      <button (click)="removeOfCart(producto.product)" type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
                         <svg class="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
                         </svg>
@@ -62,5 +83,5 @@
       </div>
     </div>
 </section>
-
+}
 

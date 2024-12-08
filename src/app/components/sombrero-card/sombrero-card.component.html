@@ -38,8 +38,10 @@
         </div>
         <div class="flex items-center justify-between">
             <span class="text-3xl font-bold text-gray-900 dark:text-white">$ {{product().precio}}</span>
-            <button class="text-white bg-green-500 hover:bg-green-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center flex 
-                     " (click)="addToCart(product())">
+            <button 
+                 data-modal-target="toast-default" data-modal-toggle="toast-default"
+                class="text-white bg-green-500 hover:bg-green-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center flex " 
+                (click)="addToCart(product())">
                 <svg
                 class="w-5 h-5 -ms-2 me-2"
                 aria-hidden="true"
@@ -59,6 +61,7 @@
               </svg>
                 Agregar al carrito
             </button>
+
         </div>
     </div>
 </div>
