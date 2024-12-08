@@ -10,38 +10,15 @@
         </ul>
 
         <div class="flex gap-3">
-            @if (isAuth) {
+            @if (store.isAuth()) {
                 <a routerLink="/shopping-cart" type="button" class="text-white bg-yellow-300 hover:bg-yellow-400 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2  ">
                     <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
                       </svg>                  
                     <span class="sr-only">Icon description</span>
-                    </a>
-                <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 cursor-pointer">
-                        <svg type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-                </div>
-    
-                    <!-- Dropdown menu -->
-                    <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <div class="px-4 py-3 text-sm text-gray-900 ">
-                        <div>{{usuario.nombre}} {{usuario.apellidoP}}</div>
-                        <div class="font-medium truncate">{{usuario.correo}}</div>
-                        </div>
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mi lista de deseos</a>
-                        </li>
-                        <li>
-                            <a routerLink="/mi-cuenta" class="block px-4 py-2 hover:bg-gray-100 ">Mi cuenta</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Carrito de compras</a>
-                        </li>
-                        </ul>
-                        <div class="py-1">
-                        <button (click)="logOut()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">Cerrar sesión</button>
-                        </div>
-                    </div>
+                </a>
+
+                <app-menu-cuenta [user]="usuario"/>
             }
             @else {
                 <div class="flex ">
