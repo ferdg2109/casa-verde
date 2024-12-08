@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import {estados} from '../../shared/const/estados';
 import { UsuariosService } from '../../pages/data-access/usuarios.services';
+import { SesionStore } from '../../shared/sesion-store';
 
 @Component({
   selector: 'app-editar-cuenta',
@@ -12,6 +13,7 @@ import { UsuariosService } from '../../pages/data-access/usuarios.services';
   styles: ``
 })
 export class EditarCuentaComponent {
+  sesionStore = inject(SesionStore);
 
   private usuarioService = inject(UsuariosService);
   updateForm: FormGroup;
@@ -21,13 +23,13 @@ export class EditarCuentaComponent {
 
   constructor(private formBuilder: FormBuilder){
     this.updateForm = this.formBuilder.group({
-      nombre : [''],
-      apellidoP: [''],
-      apellidoM: [''],
-      calle: [''],
-      ciudad: [''],
-      estado: [''],
-      CodigoPostal: [''],
+      nombre : [this.sesionStore.user().nombre],
+      apellidoP: [this.sesionStore.user().apellidoP],
+      apellidoM: [this.sesionStore.user().apellidoM],
+      calle: [this.sesionStore.user().calle],
+      ciudad: [this.sesionStore.user().ciudad],
+      estado: [this.sesionStore.user().estado],
+      CodigoP: [this.sesionStore.user().CodigoP],
     })
   }
 
