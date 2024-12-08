@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { UsuariosService } from '../data-access/usuarios.services';
+import { SesionStore } from '../../shared/sesion-store';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -11,6 +12,7 @@ import { UsuariosService } from '../data-access/usuarios.services';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  store = inject(SesionStore);
   private usuarioService = inject(UsuariosService);
 
   router:Router = new Router();
@@ -34,6 +36,7 @@ export class LoginComponent {
         .subscribe(
           (response: any) => {
             console.log("login exitoso: ",response.usuario);
+            this.store.loadUser(response.usuario);
             localStorage.setItem('usuario', JSON.stringify(response.usuario));
             this.router.navigate(['colecciones']);
           },
