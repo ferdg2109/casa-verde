@@ -1,29 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-import data from '../../../../public/data/sombreros.json'
+import { Component, computed, inject, input, OnInit, signal } from '@angular/core';
 import { SombreroCardComponent } from '../../components/sombrero-card/sombrero-card.component';
 import { SombrerosService } from '../data-access/sombreros.services';
+import { SombrerosStore } from '../../shared/sombreros-store';
+import { initFlowbite } from 'flowbite';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-colecciones',
   standalone: true,
-  imports: [ SombreroCardComponent],
+  imports: [ SombreroCardComponent, FormsModule],
   templateUrl:'./colecciones.component.html',
   styleUrl: './colecciones.component.css'
 })
 export class ColeccionesComponent implements OnInit {
- sombreros:any;
+  sombrerosStore = inject(SombrerosStore);
+  //sombreros:any;
+  valor=3000;
+  material = '';
 
  constructor(private sombrerosService:SombrerosService){
-
+  this.sombrerosStore.loadSombreros();
  }
 
  ngOnInit(): void{
-  this.sombrerosService.getSombreros().subscribe(data => {
+ /* this.sombrerosService.getSombreros().subscribe(data => {
     this.sombreros = data;
     console.log(data)
-  })
+  })*/
+  initFlowbite();
  }
 
+ onChange(){
+  this.sombrerosStore.updatePrice(this.valor);
+ }
+
+ onChangeMaterial(){
+  this.sombrerosStore.updateMaterial(this.material);
+  console.log(this.material)
+ }
  fondo = 'images/fondo.jpg'
  marcas = 'images/coleccion/marcas.png'
   img1 = 'images/coleccion/1.png'
